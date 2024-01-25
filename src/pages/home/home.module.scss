@@ -1,0 +1,63 @@
+@use '../../scss/varibles/fonts';
+@use '../../scss/mixins/typography';
+@use '../../scss/mixins/media';
+@use '../../scss/mixins/reset';
+
+.title {
+  @include reset.reset-text;
+  @include typography.typography-h3;
+
+  margin: var(--size-400) 0;
+  font-family: fonts.$font-family-main;
+  color: var(--color-text-main);
+}
+
+.content {
+  &__title {
+    @include reset.reset-text;
+    @include typography.typography-h3;
+
+    margin-bottom: var(--size-250);
+    font-family: fonts.$font-family-main;
+    color: var(--color-text-main);
+  }
+
+  &__list {
+    @include reset.reset-list;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--size-400) var(--size-300);
+
+    @include media.media(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media.media(sm) {
+      grid-template-columns: 1fr;
+      gap: var(--size-300) var(--size-300);
+    }
+  }
+}
+
+.progress {
+  width: var(--size-300);
+  height: auto;
+  transform: rotate(-90deg);
+  display: inline-flex;
+  vertical-align: middle;
+  margin-bottom: 2px;
+
+  &__track {
+    stroke: var(--color-icon-change);
+  }
+
+  &__bar {
+    stroke: var(--color-icon-invert);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}

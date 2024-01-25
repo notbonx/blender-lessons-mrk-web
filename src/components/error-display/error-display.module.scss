@@ -1,0 +1,115 @@
+@use '../../scss/varibles/fonts';
+@use '../../scss/varibles/transitions';
+@use '../../scss/varibles/opacity';
+@use '../../scss/mixins/container';
+@use '../../scss/mixins/typography';
+@use '../../scss/mixins/media';
+@use '../../scss/mixins/reset';
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-main);
+}
+
+.content {
+  @include container.container-max-widths;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+
+  @include media.media(md) {
+    flex-direction: column;
+  }
+
+  &__image {
+    flex: 1;
+    position: relative;
+    padding: var(--size-200);
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-500);
+  }
+
+  &__title {
+    @include reset.reset-text;
+    @include typography.typography-h1;
+
+    @include media.media(md) {
+      text-align: center;
+    }
+
+    margin: 0;
+    font-family: fonts.$font-family-main;
+    color: var(--color-text-main);
+  }
+
+  &__subtitle {
+    @include reset.reset-text;
+    @include typography.typography-h2;
+
+    @include media.media(md) {
+      text-align: center;
+    }
+
+    margin: 0 0 var(--size-200) 0;
+    font-family: fonts.$font-family-main;
+    color: var(--color-text-main);
+  }
+
+  &__description {
+    @include reset.reset-text;
+    @include typography.typography-paragraph;
+
+    @include media.media(md) {
+      text-align: center;
+    }
+
+    margin: 0 0 var(--size-200) 0;
+    font-family: fonts.$font-family-main;
+    color: var(--color-text-main);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    @include reset.reset-link;
+
+    text-decoration: underline;
+    transition: transitions.$transition-main;
+
+    &:hover {
+      opacity: opacity.$opacity-hover-text;
+    }
+  }
+}
+
+.image {
+  width: 100%;
+
+  & svg {
+  }
+
+  &__text {
+    @include reset.reset-text;
+    @include typography.typography-h1;
+
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    font-family: fonts.$font-family-main;
+    color: var(--color-text-error);
+    transform: translate(-50%, -50%);
+  }
+}

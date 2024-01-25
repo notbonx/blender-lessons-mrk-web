@@ -1,0 +1,9 @@
+@use '../../scss/varibles/z-index';
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: z-index.$z-index-modal-overlay;
+  background: rgb(0 0 0 / 60%);
+  cursor: pointer;
+}

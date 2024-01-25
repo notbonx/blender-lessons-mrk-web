@@ -81,13 +81,13 @@ Module.propTypes = {
       path: PropTypes.string.isRequired,
       caption: PropTypes.string.isRequired,
     }).isRequired,
-    duration: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     lessons: PropTypes.arrayOf(
       PropTypes.shape({
-        duration: PropTypes.number.isRequired,
+        id: PropTypes.string.isRequired,
       }),
     ).isRequired,
+    duration: PropTypes.number,
     id: PropTypes.string.isRequired,
   }).isRequired,
 };

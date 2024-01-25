@@ -1,0 +1,60 @@
+@use '../../scss/varibles/transitions';
+@use '../../scss/varibles/z-index';
+@use '../../scss/varibles/border-radius';
+@use '../../scss/varibles/opacity';
+@use '../../scss/mixins/media';
+@use '../../scss/mixins/reset';
+
+.container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: z-index.$z-index-modal;
+  padding: var(--size-450) var(--size-350);
+  border-radius: border-radius.$border-radius-card;
+  background: var(--color-bg-modal);
+
+  @include media.media(sm) {
+    inset: 0;
+    padding: var(--size-550) var(--size-350);
+    border-radius: 0;
+    transform: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button {
+    @include reset.reset-button;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(100%, -100%);
+    transition: transitions.$transition-main;
+
+    @include media.media(md) {
+      transform: translate(30%, -100%);
+    }
+
+    @include media.media(sm) {
+      transform: translate(0, 0);
+    }
+
+    &:hover {
+      opacity: opacity.$opacity-hover-icon;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: var(--size-550);
+		height: auto;
+    fill: var(--color-icon-main);
+
+		@include media.media(sm) {
+      fill: var(--color-icon-invert);
+    }
+  }
+}

@@ -8,7 +8,7 @@ import ModalOverlay from '../modal-overlay/modal-overlay';
 import SvgClose from '../svg-close/svg-close';
 
 // Импортируем константы и функции из утилитарного файла
-import { closeIcon, modalRoot } from './modal.utils';
+import { modalRoot } from './modal.utils';
 
 // Подключение стилей и данных
 import styles from './modal.module.scss';

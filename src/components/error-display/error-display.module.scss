@@ -98,9 +98,6 @@
 .image {
   width: 100%;
 
-  & svg {
-  }
-
   &__text {
     @include reset.reset-text;
     @include typography.typography-h1;

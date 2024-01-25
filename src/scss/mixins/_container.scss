@@ -1,0 +1,13 @@
+@use './media';
+@use '../varibles/container';
+
+// максимальная ширина блока в зависимости от контрольных точек
+@mixin container-max-widths {
+  @each $breakpoint, $size in container.$container-max-widths {
+    @include media.media-breakpoint-up($breakpoint) {
+      max-width: $size;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

@@ -4,6 +4,7 @@
 @use '../../scss/mixins/typography';
 @use '../../scss/mixins/media';
 @use '../../scss/mixins/reset';
+@use '../../scss/mixins/scrollbar';
 
 .container {
   width: 700px;
@@ -49,6 +50,8 @@
   }
 
   &__navigate {
+		@include scrollbar.custom-scrollbar;
+
     overflow-y: auto;
     flex: 1;
   }

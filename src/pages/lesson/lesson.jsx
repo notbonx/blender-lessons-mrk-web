@@ -10,6 +10,7 @@ import { updateModules } from '../../services/actions/user';
 
 // Импортируем компоненты
 import BlockImage from '../../components/block-image/block-image';
+import BlockLink from '../../components/block-link/block-link';
 
 // Импортируем константы и функции из утилитарного файла
 import { Api } from './lesson.utils';
@@ -104,6 +105,7 @@ export default function LessonPage() {
         remarkPlugins={[remarkGfm]}
         components={{
           img: BlockImage,
+          a: BlockLink,
         }}
       >
         {lesson}

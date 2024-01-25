@@ -145,15 +145,6 @@
     border: 1px solid var(--color-border-code);
     border-radius: border-radius.$border-radius-code;
   }
-
-  & a {
-    color: inherit;
-    transition: transitions.$transition-main;
-
-    &:hover {
-      opacity: opacity.$opacity-hover-text;
-    }
-  }
 }
 
 .link {

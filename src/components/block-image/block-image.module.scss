@@ -1,14 +1,9 @@
 @use '../../scss/mixins/media';
 @use '../../scss/varibles/border-radius';
 
-.container {
-  margin: var(--size-450) 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .content {
+	display: block;
+	margin: var(--size-450) auto;
   max-width: 100%;
   max-height: 100%;
   border-radius: border-radius.$border-radius-image;

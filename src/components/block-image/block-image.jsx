@@ -26,9 +26,7 @@ export default function BlockImage({ src, alt }) {
   return (
     <>
       {/* Контейнер для изображения с возможностью открытия модального окна по клику */}
-      <div className={styles.container}>
-        <img onClick={handleOpenModal} className={styles.content} src={src} alt={alt} />
-      </div>
+      <img onClick={handleOpenModal} className={styles.content} src={src} alt={alt} />
 
       {/* Модальное окно, отображающее увеличенное изображение при открытии */}
       {openModal && (

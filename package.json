@@ -33,8 +33,7 @@
       "prettier --write"
     ],
     "*.{css,scss,sass,less}": [
-      "stylelint --fix",
-      "prettier --write"
+      "stylelint --fix"
     ],
     "*.{json,ya?ml,md}": [
       "prettier --write"
@@ -101,7 +100,7 @@
     "lint-staged": "^15.2.0",
     "prettier": "^3.2.1",
     "react-router-dom": "^6.21.2",
-    "stylelint": "^16.1.0",
+    "stylelint": "^16.2.0",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-less": "^3.0.1",
     "stylelint-scss": "^6.0.0"

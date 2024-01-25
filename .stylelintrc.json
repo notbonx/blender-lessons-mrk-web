@@ -3,7 +3,6 @@
   "plugins": ["stylelint-scss", "stylelint-less"],
   "defaultSeverity": "warning",
   "rules": {
-    "indentation": 2,
     "block-no-empty": true,
     "color-no-invalid-hex": true,
     "comment-no-empty": true,

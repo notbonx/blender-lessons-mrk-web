@@ -1,9 +1,12 @@
 @use './scss/mixins/media';
 
-body {--base-ratio
+body {
+  // Основные единицы измерения
+  --base-ratio: 1;
+  --base-unit: 16px * var(--base-ratio);
 
-  --base-unit: 16px * var(--base-ratio);--size-50
-
+  // Различные размеры в единицах базовой единицы
+  --size-50: calc(var(--base-unit) * 0.25);
   --size-100: calc(var(--base-unit) * 0.5);
   --size-150: calc(var(--base-unit) * 0.75);
   --size-200: calc(var(--base-unit) * 1);
@@ -19,28 +22,32 @@ body {--base-ratio
   --size-1200: calc(var(--base-unit) * 6);
 
   // Основные цвета
-  --color-bg-main: rgb(245 245 245);--color-bg-main
-
-  --color-bg-lesson: #fff;
-  --color-bg-card: rgb(255 255 255);
-  --color-bg-modal: #fff;
-  --color-bg-code: rgb(245 245 245);
+  --color-bg-main: rgb(245, 245, 245);
+  --color-bg-lesson: #ffffff;
+  --color-bg-card: rgb(255, 255, 255);
+  --color-bg-modal: #ffffff;
+  --color-bg-code: rgb(245, 245, 245);
   --color-bg-button: #262626;
-  --color-bg-link-hover: rgb(0 0 0 / 6%);
-  --color-bg-table: rgb(32 33 36 / 3%);
-  --color-border-code: rgb(224 224 224);
+  --color-bg-link-hover: rgba(0, 0, 0, 0.06);
+  --color-bg-table: rgba(32, 33, 36, 0.03);
+
+  --color-border-code: rgb(224, 224, 224);
   --color-border-link-active: #1b1b1e;
-  --color-border-table: rgb(208 215 222);
-  --color-icon-main: rgb(214 214 214);
-  --color-icon-change: rgb(214 214 214);
-  --color-icon-invert: rgb(0 0 0 / 85%);
-  --color-text-main: rgb(0 0 0 / 85%);
-  --color-text-invert: rgb(214 214 214);
+  --color-border-table: rgb(208, 215, 222);
+
+  --color-icon-main: rgb(214, 214, 214);
+  --color-icon-change: rgb(214, 214, 214);
+  --color-icon-invert: rgba(0, 0, 0, 0.85);
+
+  --color-text-main: rgba(0, 0, 0, 0.85);
+  --color-text-invert: rgb(214, 214, 214);
   --color-text-error: #fe1b1b;
-	--color-scroll-track: #f1f1f1;
-	--color-scroll-thumb: #888;
-	--color-scroll-thumb-hover: #555;
-  --box-shadow-card: 0 4px 6px -7px rgb(0 0 0 / 10%), 0 4px 30px -9px rgb(0 0 0 / 20%);
+
+  --color-scroll-track: #f1f1f1;
+  --color-scroll-thumb: #888;
+  --color-scroll-thumb-hover: #555;
+
+  --box-shadow-card: 0 4px 6px -7px rgba(0, 0, 0, 0.1), 0 4px 30px -9px rgba(0, 0, 0, 0.2);
 
   // Применение стилей для медиа-запросов на устройствах среднего размера
   @include media.media(md) {
@@ -50,23 +57,28 @@ body {--base-ratio
 
 // Темная тема
 body.dark {
-  --color-bg-main: rgb(27 27 30);
-  --color-bg-lesson: rgb(32 33 36);
-  --color-bg-card: rgb(32 33 36);
-  --color-bg-modal: rgb(32 33 36);
-  --color-bg-code: rgb(27 27 30);
-  --color-bg-button: rgb(255 255 255);
-  --color-bg-link-hover: rgb(255 255 255 / 6%);
-  --color-bg-table: rgb(255 255 255 / 3%);
-  --color-border-code: rgb(46 46 46);
-  --color-border-link-active: #fff;
-  --color-icon-change: rgb(0 0 0 / 85%);
-  --color-icon-invert: rgb(214 214 214);
+  --color-bg-main: rgb(27, 27, 30);
+  --color-bg-lesson: rgb(32, 33, 36);
+  --color-bg-card: rgb(32, 33, 36);
+  --color-bg-modal: rgb(32, 33, 36);
+  --color-bg-code: rgb(27, 27, 30);
+  --color-bg-button: rgb(255, 255, 255);
+  --color-bg-link-hover: rgba(255, 255, 255, 0.06);
+  --color-bg-table: rgba(255, 255, 255, 0.03);
+
+  --color-border-code: rgb(46, 46, 46);
+  --color-border-link-active: #ffffff;
+
+  --color-icon-change: rgba(0, 0, 0, 0.85);
+  --color-icon-invert: rgb(214, 214, 214);
   --filter-icon: invert(100%);
-  --color-text-main: rgb(214 214 214);
-  --color-text-invert: rgb(0 0 0 / 85%);
-	--color-scroll-track: rgb(9 9 9);
-	--color-scroll-thumb: rgb(114 114 114);
-	--color-scroll-thumb-hover: rgb(165 165 165);
-  --box-shadow-card: 0 4px 6px -7px rgb(255 255 255 / 10%), 0 4px 30px -9px rgb(255 255 255 / 20%);
+
+  --color-text-main: rgb(214, 214, 214);
+  --color-text-invert: rgba(0, 0, 0, 0.85);
+
+  --color-scroll-track: rgb(9, 9, 9);
+  --color-scroll-thumb: rgb(114, 114, 114);
+  --color-scroll-thumb-hover: rgb(165, 165, 165);
+
+  --box-shadow-card: 0 4px 6px -7px rgba(255, 255, 255, 0.1), 0 4px 30px -9px rgba(255, 255, 255, 0.2);
 }

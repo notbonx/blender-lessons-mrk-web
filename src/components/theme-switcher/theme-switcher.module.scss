@@ -1,0 +1,27 @@
+@use '../../scss/varibles/border-radius';
+@use '../../scss/varibles/opacity';
+@use '../../scss/varibles/transitions';
+@use '../../scss/mixins/reset';
+
+.button {
+  @include reset.reset-button;
+
+  position: fixed;
+  right: var(--size-300);
+  bottom: var(--size-300);
+  padding: var(--size-200);
+  background-color: var(--color-bg-button);
+  border-radius: border-radius.$border-radius-button;
+  transition: transitions.$transition-main;
+
+  &:hover {
+    opacity: opacity.$opacity-hover-icon;
+  }
+
+  &__image {
+    display: block;
+    width: var(--size-300);
+    height: auto;
+    fill: var(--color-icon-change);
+  }
+}

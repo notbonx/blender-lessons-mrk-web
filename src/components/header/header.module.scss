@@ -1,0 +1,71 @@
+@use '../../scss/varibles/z-index';
+@use '../../scss/varibles/opacity';
+@use '../../scss/varibles/transitions';
+@use '../../scss/mixins/container';
+@use '../../scss/mixins/reset';
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: z-index.$z-index-header;
+  background-color: inherit;
+}
+
+.content {
+  @include container.container-max-widths;
+
+  padding: var(--size-150) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__icon {
+    display: block;
+    height: var(--size-550);
+  }
+
+  &__link {
+    @include reset.reset-link;
+
+    width: fit-content;
+    transition: transitions.$transition-main;
+
+    &:hover {
+      opacity: opacity.$opacity-hover-icon;
+    }
+  }
+}
+
+.buttons {
+  &__item {
+    padding: var(--size-200);
+    transition: transitions.$transition-main;
+
+    &:hover {
+      opacity: opacity.$opacity-hover-icon;
+    }
+
+    &_link {
+      @include reset.reset-link;
+    }
+
+    &_button {
+      @include reset.reset-button;
+
+      padding: var(--size-200);
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: var(--size-300);
+		height: auto;
+    fill: var(--color-icon-invert);
+  }
+}

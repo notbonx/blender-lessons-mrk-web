@@ -1,0 +1,70 @@
+@use '../../scss/varibles/fonts';
+@use '../../scss/varibles/transitions';
+@use '../../scss/varibles/opacity';
+@use '../../scss/mixins/container';
+@use '../../scss/mixins/typography';
+@use '../../scss/mixins/media';
+@use '../../scss/mixins/reset';
+
+.container {
+  @include container.container-max-widths;
+
+  @include media.media(sm) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  padding: var(--size-600) 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--size-300);
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-200);
+
+    @include media.media(sm) {
+      align-items: center;
+    }
+  }
+
+  &__media {
+    @include reset.reset-list;
+
+    display: flex;
+    gap: var(--size-200);
+  }
+}
+
+.contact {
+  @include reset.reset-link;
+
+  &_text {
+		@include reset.reset-text;
+    @include typography.typography-link;
+
+    width: fit-content;
+    font-family: fonts.$font-family-main;
+    color: var(--color-text-main);
+
+		&:hover {
+			text-decoration: underline
+		}
+  }
+
+  &_icon {
+    transition: transitions.$transition-main;
+		
+		&:hover {
+			opacity: opacity.$opacity-hover-icon;
+		}
+
+    & img {
+      display: block;
+      width: var(--size-300);
+			filter: var(--filter-icon);
+    }
+  }
+}

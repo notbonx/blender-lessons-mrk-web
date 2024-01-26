@@ -1,0 +1,78 @@
+@use './media';
+@use '../varibles/breakpoints';
+
+// Миксин для настройки кастомной типографики
+@mixin typography-custom($font-size, $font-weight, $line-height) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// Типографика h1
+@mixin typography-h1 {
+  @include typography-custom(40px, 600, 44px);
+  // Медиа-запрос для планшетов и выше
+  @include media.media(md) {
+    @include typography-custom(30px, 600, 33px);
+  }
+}
+
+// Типографика h2
+@mixin typography-h2 {
+  @include typography-custom(24px, 600, 30px);
+}
+
+// Типографика h3
+@mixin typography-h3 {
+  @include typography-custom(22px, 400, 26px);
+}
+
+// Типографика h3 с жирным шрифтом
+@mixin typography-h3-bold {
+  @include typography-custom(22px, 600, 26px);
+}
+
+// Типографика h4
+@mixin typography-h4 {
+  @include typography-custom(20px, 400, 24px);
+}
+
+// Типографика h4 с жирным шрифтом
+@mixin typography-h4-bold {
+  @include typography-custom(20px, 600, 24px);
+}
+
+// Типографика h5
+@mixin typography-h5 {
+  @include typography-custom(18px, 400, 20px);
+}
+
+// Типографика h5 с жирным шрифтом
+@mixin typography-h5-bold {
+  @include typography-custom(18px, 600, 20px);
+}
+
+// Типографика для абзацев
+@mixin typography-paragraph {
+  @include typography-custom(18px, 400, 27px);
+}
+
+// Типографика для маленьких абзацев
+@mixin typography-paragraph-small {
+  @include typography-custom(14px, 400, 27px);
+}
+
+// Типографика для кода
+@mixin typography-code {
+  @include typography-custom(14px, 400, 24px);
+}
+
+// Типографика для ссылок
+@mixin typography-link {
+  @include typography-custom(20px, 400, 24px);
+}
+
+// Типографика для маленьких ссылок
+@mixin typography-link-small {
+  @include typography-custom(16px, 400, 18px);
+}

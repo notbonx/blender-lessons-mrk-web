@@ -1,0 +1,12 @@
+@use '../../scss/varibles/transitions';
+@use '../../scss/varibles/opacity';
+
+.link {
+  color: inherit;
+  text-decoration: underline;
+  transition: transitions.$transition-main;
+
+  &:hover {
+    opacity: opacity.$opacity-hover-text;
+  }
+}

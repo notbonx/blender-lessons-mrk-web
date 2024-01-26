@@ -29,9 +29,9 @@ body {
   --color-bg-code: rgb(245, 245, 245);
   --color-bg-button: #262626;
   --color-bg-link-hover: rgba(0, 0, 0, 0.06);
-  --color-bg-table-header: #b5b8bb;
-  --color-bg-table: rgba(32, 33, 36, 0.03);
-  --color-bg-table-hover: #e7ebee;
+  --color-bg-table-header: #e6e6e6;
+  --color-bg-table: #f6f8fa;
+  --color-bg-table-hover: #eff1f3;
 
   --color-border-code: #e0e0e0;
   --color-border-link-active: #1b1b1e;
@@ -47,9 +47,9 @@ body {
   --color-text-error: #fe1b1b;
   --color-content-secondary: rgba(0, 0, 0, 0.5);
 
-  --color-scroll-track: #e0e0e0;
-  --color-scroll-thumb: #474747;
-  --color-scroll-thumb-hover: #212121;
+  --color-scroll-track: #f1f1f1;
+  --color-scroll-thumb: #c1c1c1;
+  --color-scroll-thumb-hover: #a8a8a8;
 
   --box-shadow-card: 0 4px 6px -7px rgba(0, 0, 0, 0.1), 0 4px 30px -9px rgba(0, 0, 0, 0.2);
 
@@ -68,9 +68,9 @@ body.dark {
   --color-bg-code: rgb(27, 27, 30);
   --color-bg-button: rgb(255, 255, 255);
   --color-bg-link-hover: rgba(255, 255, 255, 0.06);
-  --color-bg-table-header: rgb(22, 22, 21);
-  --color-bg-table: rgba(255, 255, 255, 0.03);
-  --color-bg-table-hover: rgb(19, 15, 12);
+  --color-bg-table-header: #0d1117;
+  --color-bg-table: #161b22;
+  --color-bg-table-hover: #343942;
 
   --color-border-code: rgb(46, 46, 46);
   --color-border-link-active: #ffffff;
@@ -84,9 +84,9 @@ body.dark {
   --color-text-invert: rgba(0, 0, 0, 0.85);
   --color-content-secondary: rgba(255, 255, 255, 0.5);
 
-  --color-scroll-track: rgb(9, 9, 9);
-  --color-scroll-thumb: rgb(114, 114, 114);
-  --color-scroll-thumb-hover: rgb(165, 165, 165);
+  --color-scroll-track: #424242;
+  --color-scroll-thumb: #686868;
+  --color-scroll-thumb-hover: #7b7b7b;
 
   --box-shadow-card: 0 4px 6px -7px rgba(255, 255, 255, 0.1), 0 4px 30px -9px rgba(255, 255, 255, 0.2);
 }

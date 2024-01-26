@@ -4,6 +4,7 @@
   "private": true,
   "description": "Проект представляет собой веб-сайт, целью которого является предоставление обучающих материалов и курсов по программе \"Компас 3D\".",
   "main": "index.js",
+  "homepage": "https://notacat1.github.io/COMPASS-3D-courses-WEB",
   "repository": {
     "type": "git",
     "url": "https://github.com/NotACat1/COMPASS-3D-courses-WEB"

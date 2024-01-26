@@ -1,3 +1,10 @@
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
 # Веб-сайт по курсам "Компас 3D"
 
 Добро пожаловать в веб-платформу по обучению использованию программы "Компас 3D". Наш проект призван предоставить пользователям полноценный доступ к образовательным курсам, материалам и ресурсам, специально разработанным для усвоения навыков работы с программой "Компас 3D".
@@ -75,7 +82,7 @@ npm run husky-inst
 
 ## Файловая система проекта
 
-```java
+```css
 ./
   .husky/                    // Папка для настроек Husky (pre-commit и commit-msg hooks)
     commit-msg               // Скрипт для проверки сообщения коммита

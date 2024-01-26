@@ -422,7 +422,7 @@ class ApiService {
 ```js
 // src/components/app/app.utils.js
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     loader: rootLoader,

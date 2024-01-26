@@ -29,7 +29,6 @@
   "bugs": {
     "url": "https://github.com/NotACat1/COMPASS-3D-courses-WEB/issues"
   },
-  "homepage": "https://github.com/NotACat1/COMPASS-3D-courses-WEB#readme",
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint --fix",
@@ -97,6 +96,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "eslint": "^8.56.0",

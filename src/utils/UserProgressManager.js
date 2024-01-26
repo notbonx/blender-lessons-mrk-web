@@ -13,13 +13,13 @@ class UserProgressManager {
 
   // Метод для загрузки прогресса пользователя из локального хранилища
   loadProgress() {
-    const progressData = localStorage.getItem(this.storageKey);
-    return progressData ? JSON.parse(progressData) : {}; // Возвращаем объект прогресса или пустой объект
+    const progressData = this.localStorageManager.getItem(this.storageKey);
+    return progressData ? progressData : {}; // Возвращаем объект прогресса или пустой объект
   }
 
   // Метод для сохранения прогресса пользователя в локальное хранилище
   saveProgress() {
-    localStorage.setItem(this.storageKey, JSON.stringify(this.userProgress));
+    this.localStorageManager.setItem(this.storageKey, JSON.stringify(this.userProgress));
   }
 
   // Метод для обновления прогресса пользователя при прохождении урока

@@ -16,6 +16,7 @@
   }
 
   @include media.media(md) {
+		max-height: 60vh;
     width: 100%;
   }
 
@@ -37,6 +38,10 @@
     margin-bottom: var(--size-500);
     font-family: fonts.$font-family-main;
     color: var(--color-text-main);
+
+		@include media.media(md) {
+			display: none;
+		}
   }
 
   &__subtitle {

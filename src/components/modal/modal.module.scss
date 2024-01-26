@@ -4,6 +4,7 @@
 @use '../../scss/varibles/opacity';
 @use '../../scss/mixins/media';
 @use '../../scss/mixins/reset';
+@use '../../scss/mixins/scrollbar';
 
 .container {
   position: fixed;
@@ -50,10 +51,10 @@
   &__image {
     display: block;
     width: var(--size-550);
-		height: auto;
+    height: auto;
     fill: var(--color-icon-main);
 
-		@include media.media(sm) {
+    @include media.media(sm) {
       fill: var(--color-icon-invert);
     }
   }

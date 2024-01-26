@@ -2,7 +2,7 @@
   "name": "compass-3d-courses-web",
   "version": "0.1.0",
   "private": true,
-  "description": "Веб-курс по работе с программой Компас 3D",
+  "description": "Проект представляет собой веб-сайт, целью которого является предоставление обучающих материалов и курсов по программе \"Компас 3D\".",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -15,7 +15,14 @@
     "web-development",
     "React",
     "Redux",
-    "SCSS"
+    "SCSS",
+    "react-markdown",
+    "ESLint",
+    "Prettier",
+    "Stylelint",
+    "HTMLHint",
+    "husky",
+    "Normalize.css"
   ],
   "author": "NotACat",
   "license": "MIT",

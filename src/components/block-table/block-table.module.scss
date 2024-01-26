@@ -1,0 +1,71 @@
+@use '../../scss/varibles/transitions';
+@use '../../scss/varibles/opacity';
+@use '../../scss/varibles/fonts';
+@use '../../scss/mixins/scrollbar';
+
+.container {
+  @include scrollbar.custom-scrollbar;
+
+  margin: var(--size-150) 0;
+  max-height: 80vh;
+  overflow: auto;
+  border: 1px solid var(--color-border-table);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: fonts.$font-family-main;
+  color: var(--color-text-main);
+	//border-inline: 1px solid var(--color-border-table);
+
+  &,
+  th,
+  td {
+    border-collapse: collapse;
+    border-left: 1px solid var(--color-border-table);
+
+		&:first-of-type {
+			border-left: none;
+		}
+  }
+
+	& img {
+		margin: 0;
+	}
+
+  & td,
+  th {
+    padding: var(--size-100);
+  }
+
+  & thead {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg-table-header);
+  }
+
+  & tbody {
+    & td:first-of-type {
+      text-align: center;
+    }
+
+    & tr {
+			border-bottom: 1px solid var(--color-border-table);
+      transition: transitions.$transition-main;
+
+      &:nth-child(2n) {
+        background-color: var(--color-bg-table);
+      }
+
+      &:hover {
+        background-color: var(--color-bg-table-hover);
+      }
+
+      & img {
+        min-width: 20vw;
+        max-height: 30%;
+      }
+    }
+  }
+}

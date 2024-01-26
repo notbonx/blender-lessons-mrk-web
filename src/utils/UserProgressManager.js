@@ -19,7 +19,7 @@ class UserProgressManager {
 
   // Метод для сохранения прогресса пользователя в локальное хранилище
   saveProgress() {
-    this.localStorageManager.setItem(this.storageKey, JSON.stringify(this.userProgress));
+    this.localStorageManager.setItem(this.storageKey, this.userProgress);
   }
 
   // Метод для обновления прогресса пользователя при прохождении урока

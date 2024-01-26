@@ -7,20 +7,21 @@
 
 .container {
   min-height: 360px;
-  padding: 0 var(--size-300) var(--size-300) var(--size-300);
+  padding: var(--size-300);
   background-color: var(--color-bg-card);
   border-radius: border-radius.$border-radius-card;
   display: flex;
   flex-direction: column;
+	gap: var(--size-100);
   transition: transitions.$transition-main;
 
   @include media.media(lg) {
-    padding: 0 var(--size-200) var(--size-150) var(--size-200);
+    padding: var(--size-200) var(--size-150);
   }
 
   @include media.media(sm) {
     min-height: 115px;
-    padding: var(--size-200) var(--size-200) var(--size-200) 0;
+    padding: var(--size-200);
     flex-direction: row;
   }
 
@@ -45,6 +46,7 @@
     max-width: 100%;
     font-family: fonts.$font-family-main;
     color: var(--color-text-main);
+		object-fit: contain;
 
     @include media.media(sm) {
       min-width: 45%;

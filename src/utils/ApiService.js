@@ -1,6 +1,8 @@
+import { BASE_URL } from './constants';
+
 // Класс для работы с API
 class ApiService {
-  constructor(url) {
+  constructor(url = BASE_URL) {
     this._baseUrl = url;
   }
 
@@ -39,4 +41,4 @@ class ApiService {
 }
 
 // Создание экземпляра ApiService с базовым URL
-export default new ApiService('https://raw.githubusercontent.com/NotACat1/COMPASS-3D-courses/gh-pages');
+export default new ApiService();

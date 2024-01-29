@@ -6,6 +6,7 @@
 @use '../../scss/mixins/reset';
 
 .container {
+  position: relative;
   min-height: 360px;
   padding: var(--size-300);
   background-color: var(--color-bg-card);
@@ -16,7 +17,7 @@
   transition: transitions.$transition-main;
 
   @include media.media(lg) {
-    padding: var(--size-200) var(--size-150);
+    padding: var(--size-200) var(--size-300) var(--size-350) var(--size-300);
   }
 
   @include media.media(sm) {
@@ -67,9 +68,9 @@
     @include reset.reset-text;
     @include typography.typography-paragraph-small;
 
-    margin: 0 0 var(--size-100) 0;
+    margin: 0;
     font-family: fonts.$font-family-main;
-    color: var(--color-text-main);
+    color: var(--color-content-secondary);
     opacity: 0;
     transition: transitions.$transition-main;
 
@@ -80,9 +81,13 @@
 }
 
 .line {
-  width: 100%;
+  position: absolute;
+  bottom: var(--size-100);
+  left: 50%;
+  width: 85%;
   height: 4px;
-  background-color: var(--color-text-invert);
+  background-color: var(--color-icon-track);
+  transform: translate(-50%, 0);
 
   @include media.media(sm) {
     display: none;

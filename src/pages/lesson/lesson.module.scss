@@ -4,6 +4,7 @@
 @use '../../scss/varibles/transitions';
 @use '../../scss/mixins/typography';
 @use '../../scss/mixins/reset';
+@use '../../scss/mixins/scrollbar';
 
 .content {
   & h1,
@@ -22,8 +23,7 @@
   h5,
   p,
   ul,
-  ol,
-  table {
+  ol {
     font-family: fonts.$font-family-main;
     color: var(--color-text-main);
   }
@@ -105,39 +105,9 @@
     gap: var(--size-100);
   }
 
-  & table,
-  th,
-  td {
-    border: 1px solid var(--color-border-table);
-    border-collapse: collapse;
-  }
-
-  & th,
-  td {
-    padding: var(--size-100);
-  }
-
-  & table tbody tr {
-    &:nth-child(2n) {
-      background-color: var(--color-bg-table);
-    }
-
-    & td:first-of-type {
-      text-align: center;
-    }
-
-    & td:last-of-type {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      & * {
-        max-width: 30vw;
-      }
-    }
-  }
-
   & pre {
+    @include scrollbar.custom-scrollbar;
+
     overflow-y: auto;
     margin: var(--size-150) 0;
     padding: var(--size-250);

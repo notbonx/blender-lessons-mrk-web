@@ -11,6 +11,7 @@ import { updateModules } from '../../services/actions/user';
 // Импортируем компоненты
 import BlockImage from '../../components/block-image/block-image';
 import BlockLink from '../../components/block-link/block-link';
+import BlockTable from '../../components/block-table/block-table';
 
 // Импортируем константы и функции из утилитарного файла
 import { Api } from './lesson.utils';
@@ -106,6 +107,7 @@ export default function LessonPage() {
         components={{
           img: BlockImage,
           a: BlockLink,
+          table: BlockTable,
         }}
       >
         {lesson}

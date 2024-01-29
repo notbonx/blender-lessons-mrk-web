@@ -1,15 +1,25 @@
 // Функция calculateProgress вычисляет прогресс пользователя в прохождении модулей курса
 const calculateProgress = (allModules, userProgress) => {
-  // Счетчик завершенных модулей
-  const completedModules = allModules.reduce((progress, { id: moduleId, lessons }) => {
-    // Проверяем наличие данных о прогрессе для модуля и наличие пройденных всех уроков
-    if (userProgress[moduleId] && !lessons.some(({ id: lessonId }) => !userProgress[moduleId].includes(lessonId))) {
-      return progress + 1; // Увеличиваем счетчик, если у модуля есть прогресс
+  // Счетчик пройденных уроков
+  let completedLessons = 0;
+
+  // Общее количество уроков
+  let totalLessons = 0;
+
+  allModules.forEach(({ id: moduleId, lessons }) => {
+    // Увеличиваем общее количество уроков
+    totalLessons += lessons.length;
+
+    // Проверяем наличие данных о прогрессе для модуля
+    if (userProgress[moduleId]) {
+      // Проверяем, сколько уроков в данном модуле пройдено
+      completedLessons += userProgress[moduleId].filter((lessonId) =>
+        lessons.some((lesson) => lesson.id === lessonId),
+      ).length;
     }
-    return progress;
-  }, 0);
+  });
   // Рассчитываем процент завершенности курса
-  return Math.round((completedModules / allModules.length) * 100);
+  return totalLessons !== 0 ? Math.round((completedLessons / totalLessons) * 100) : 0;
 };
 
 export { calculateProgress };

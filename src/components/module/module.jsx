@@ -59,9 +59,11 @@ export default function Module({ data }) {
             {/* Отображение количества уроков и соответствующего слова для уроков */}
             {lessons.length} {getLessonWord(lessons.length)} &asymp; {duration} мин.
           </p>
-          <div className={styles.line}>
-            <div className={styles.line__progress} style={{ width: `${memoizedProgress}%` }}></div>
-          </div>
+          {memoizedProgress > 0 && (
+            <div className={styles.line}>
+              <div className={styles.line__progress} style={{ width: `${memoizedProgress}%` }}></div>
+            </div>
+          )}
         </div>
       </li>
       {/* Условный рендеринг модального окна */}

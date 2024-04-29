@@ -41,7 +41,7 @@ const LOCAL_STORAGE = {
 // Класс для темной темы (используется в CSS)
 const CLASS_DARK_THEME = 'dark';
 
-const BASE_URL = 'https://raw.githubusercontent.com/NotACat1/COMPASS-3D-courses/gh-pages';
+const BASE_URL = 'https://raw.githubusercontent.com/notbonx/blender-lessons-mrk/gh-pages';
 
 // Экспорт объектов и переменных для использования в других частях приложения
 export { CONTACTS, THEMES, LOCAL_STORAGE, CLASS_DARK_THEME, BASE_URL };

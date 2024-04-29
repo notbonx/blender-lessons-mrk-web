@@ -4,10 +4,10 @@
   "private": true,
   "description": "Проект представляет собой веб-сайт, целью которого является предоставление обучающих материалов и курсов по программе \"Компас 3D\".",
   "main": "index.js",
-  "homepage": "https://notacat1.github.io/COMPASS-3D-courses-WEB",
+  "homepage": "https://notbonx.github.io/blender-lessons-mrk-web",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NotACat1/COMPASS-3D-courses-WEB"
+    "url": "https://github.com/notbonx/blender-lessons-mrk-web"
   },
   "keywords": [
     "web-course",
@@ -28,7 +28,7 @@
   "author": "NotACat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NotACat1/COMPASS-3D-courses-WEB/issues"
+    "url": "https://github.com/notbonx/blender-lessons-mrk-web/issues"
   },
   "lint-staged": {
     "*.{js,jsx}": [
